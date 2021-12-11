@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - F# - Build a Technical Documentation Page</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<nav id="navbar">
+  <header>
+    <h1>F# Documentation</h1>
+  </header>
+  <a class="nav-link" href="#what_is_f#">
+    <div class="nav-link-button">
+      What is F#
+    </div>
+  </a>
+
+  <a class="nav-link" href="#get_started_with_f#">
+    <div class="nav-link-button">
+      Get Started with F#
+    </div>
+  </a>
+
+  <a class="nav-link" href="#introduction_to_functional_programming_in_f#">
+    <div class="nav-link-button">
+      Introduction to Functional Programming in F#
+    </div>
+  </a>
+
+  <a class="nav-link" href="#async_programming_in_f#">
+    <div class="nav-link-button">
+      Async programming in F#
+    </div>
+  </a>
+  <a class="nav-link" href="#reference">
+    <div class="nav-link-button">
+      Reference
+    </div>
+  </a>
+
+</nav>
+<main id="main-doc">
+  <section class="main-section" id="what_is_f#">
+    <header>
+      <h2>What is F#</h2>
+    </header>
+    <p>
+      F# is a functional programming language that makes it easy to write correct and maintainable code.
+    </p>
+    <p>
+      F# programming primarily involves defining types and functions that are type-inferred and generalized automatically. This allows your focus to remain on the problem domain and manipulating its data, rather than the details of programming.
+    </p>
+    <div class="code">
+      <div class="code-title">F#</div>
+      <div class="code-content">
+        <code>
+          <span class="blue-code">open</span> System <span class="green-code">// Gets access to functionality in System namespace.</code>
+            <br><br>
+          <code>// Defines a function that takes a name and produces a greeting.</span></code>
+          <code><span class="blue-code"><br>let</span> getGreeting name = $<span class="red-code">"Hello, {name}! Isn't F# great?"</span>
+          <br><br>
+            <code><span class="light-blue-code">[&lt;EntryPoint&gt;]</span></code><br>
+          <code><span class="blue-code">let</span> main args =<br>
+            &nbsp; <span class="green-code">// Defines a list of names</span><br></code>
+<code>          &nbsp; <span class="blue-code">let</span> names = [ <span class="red-code">"Don"</span>; <span class="red-code">"Julia"</span>; <span class="red-code">"Xi"</span> ]<br>
+          <br>
+          &nbsp; <span class="green-code">// Prints a greeting for each name!</span><br>
+          &nbsp; names<br>
+          &nbsp; |> List.map getGreeting<br>
+          &nbsp; |> List.iter (<span class="blue-code">fun</span> greeting -> printfn $<span class="red-code">"{greeting}"</span>)<br>
+          <br>
+          &nbsp; 0<br>
+        </code>
+      </div>
+    </div>
+    <p>F# has numerous features, including:</p>
+    <ul>
+
+      <li>Lightweight syntax</li>
+      <li>Immutable by default</li>
+      <li>Type inference and automatic generalization</li>
+      <li>First-class functions</li>
+      <li>Powerful data types</li>
+      <li>Pattern matching</li>
+      <li>Async programming</li>
+
+    </ul>
+  </section>
+  <section class="main-section" id="get_started_with_f#">
+    <header>
+      <h2>Get Started with F#</h2>
+    </header>
+    <p>
+      You can get started with F# on your machine or online.
+    </p>
+    <h3>Get started on your machine</h3>
+
+    <p>There are multiple guides on how to install and use F# for the first time on your machine. You can use the following table to help in making a decision:</p>
+    <div class="grid-container">
+      <div class="grid strong">OS</div>
+      <div class="grid strong">Prefer Visual Studio</div>
+      <div class="grid strong">Prefer Visual Studio Code</div>
+      <div class="grid strong">Prefer command line</div>
+        <div class="grid grid-border">Windows</div>
+      <div  class="grid grid-border"><a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/fsharp/get-started/get-started-visual-studio">Get started with Visual Studio</a></div>
+      <div class="grid grid-border">
+        <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/fsharp/get-started/get-started-vscode">Get started with Visual Studio Code</a></div>
+      <div class="grid grid-border"><a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/fsharp/get-started/get-started-command-line">Get started with the .NET Core CLI</a></div>
+
+      <div class="grid grid-border">macOS</div>
+      <div class="grid grid-border">
+        <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/fsharp/get-started/get-started-with-visual-studio-for-mac">Get started with VS for Mac</a>
+      </div>
+      <div class="grid grid-border">
+        <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/fsharp/get-started/get-started-vscode">Get started with Visual Studio Code</a>
+      </div>
+      <div class="grid grid-border">
+        <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/fsharp/get-started/get-started-command-line">Get started with the .NET Core CLI</a>
+          
+        </div>
+      <div class="grid grid-border">
+        Linux
+      </div>
+      <div class="grid grid-border">N/A</div>
+        <div class="grid grid-border"><a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/fsharp/get-started/get-started-vscode">Get started with Visual Studio Code</a></div>
+      <div class="grid grid-border"><a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/fsharp/get-started/get-started-command-line">Get started with the .NET Core CLI</a></div>
+    </div>
+    <h3>Get started online</h3>
+    <p>If you'd rather not install F# and .NET on your machine, you can also get started with F# in the browser:</p>
+    <ul>
+      <li><a target="_blank" href="https://mybinder.org/v2/gh/dotnet/interactive/main?urlpath=lab">Introduction to F# on Binder</a> is a <a target="_blank" href="https://jupyter.org/">Jupyter notebook</a> on hosted via the free <a target="_blank" href="https://mybinder.org/">Binder</a> service. No sign-up needed!</li>
+      <li><a target="_blank" href="https://fable.io/repl/">The Fable REPL</a> is an interactive, in-browser REPL that uses <a target="_blank" href="https://fable.io/">Fable</a> to translate F# code into JavaScript. Check out the numerous samples that range from F# basics to a fully fledged video game all executing in your browser!</li>
+
+  </section>
+  <section class="main-section" id="introduction_to_functional_programming_in_f#">
+    <header>
+      <h2>Introduction to Functional Programming in F#</h2>
+    </header>
+    <p>Functional programming is a style of programming that emphasizes the use of functions and immutable data. Typed functional programming is when functional programming is combined with static types, such as with F#. In general, the following concepts are emphasized in functional programming:</p>
+    <ul>
+      <li>Functions as the primary constructs you use</li>
+      <li>Expressions instead of statements</li>
+      <li>Immutable values over variables</li>
+      <li>Declarative programming over imperative programming</li>
+    </ul>
+
+    <h3>Terminology</h3>
+
+    <p>Functional programming, like other programming paradigms, comes with a vocabulary that you will eventually need to learn. Here are some common terms you'll see all of the time:</p>
+    <ul>
+      <li><strong>Function</strong> - A function is a construct that will produce an output when given an input. More formally, it maps an item from one set to another set. This formalism is lifted into the concrete in many ways, especially when using functions that operate on collections of data. It is the most basic (and important) concept in functional programming.</li>
+      <li><strong>Expression</strong> - An expression is a construct in code that produces a value. In F#, this value must be bound or explicitly ignored. An expression can be trivially replaced by a function call.</li>
+      <li><strong>Purity</strong> - Purity is a property of a function such that its return value is always the same for the same arguments, and that its evaluation has no side effects. A pure function depends entirely on its arguments.</li>
+      <li><strong>Referential Transparency</strong> - Referential Transparency is a property of expressions such that they can be replaced with their output without affecting a program's behavior.</li>
+      <li><strong>Immutability</strong> - Immutability means that a value cannot be changed in-place. This is in contrast with variables, which can change in place.</li>
+    </ul>
+  </section>
+  <section class="main-section" id="async_programming_in_f#">
+    <header>
+      <h2>Async programming in F#</h2>
+    </header>
+    <p>Asynchronous programming is a mechanism that is essential to modern applications for diverse reasons. There are two primary use cases that most developers will encounter:</p>
+<ul>
+    <li>Presenting a server process that can service a significant number of concurrent incoming requests, while minimizing the system resources occupied while request processing awaits inputs from systems or services external to that process</li>
+    <li>Maintaining a responsive UI or main thread while concurrently progressing background work</li>
+    </ul>
+<p>Although background work often does involve the utilization of multiple threads, it's important to consider the concepts of asynchrony and multi-threading separately. In fact, they are separate concerns, and one does not imply the other. This article describes the separate concepts in more detail.</p>
+  <h3>Asynchrony defined</h3>
+
+<p>The previous point - that asynchrony is independent of the utilization of multiple threads - is worth explaining a bit further. There are three concepts that are sometimes related, but strictly independent of one another:</p>
+<ul>
+    <li>Concurrency; when multiple computations execute in overlapping time periods.</li>
+    <li>Parallelism; when multiple computations or several parts of a single computation run at exactly the same time.</li>
+    <li>Asynchrony; when one or more computations can execute separately from the main program flow.</li>
+  </ul>
+<p>All three are orthogonal concepts, but can be easily conflated, especially when they are used together. For example, you may need to execute multiple asynchronous computations in parallel. This relationship does not mean that parallelism or asynchrony imply one another.</p>
+
+  <p>If you consider the etymology of the word "asynchronous", there are two pieces involved:</p>
+<ul>
+    <li>"a", meaning "not".</li>
+    <li>"synchronous", meaning "at the same time".</li>
+    </ul>
+<p>When you put these two terms together, you'll see that "asynchronous" means "not at the same time". That's it! There is no implication of concurrency or parallelism in this definition. This is also true in practice.</p>
+
+<p>In practical terms, asynchronous computations in F# are scheduled to execute independently of the main program flow. This independent execution doesn't imply concurrency or parallelism, nor does it imply that a computation always happens in the background. In fact, asynchronous computations can even execute synchronously, depending on the nature of the computation and the environment the computation is executing in.</p>
+
+<p>The main takeaway you should have is that asynchronous computations are independent of the main program flow. Although there are few guarantees about when or how an asynchronous computation executes, there are some approaches to orchestrating and scheduling them. The rest of this article explores core concepts for F# asynchrony and how to use the types, functions, and expressions built into F#.</p>
+  </section>
+  <section class="main-section" id="reference">
+    <header>
+      <h2>Reference</h2>
+    </header>
+    <p>
+      All the documentation in this page is taken from <a href="https://docs.microsoft.com/en-us/dotnet/fsharp/">Microsoft</a>.
+    </p>
+  </section>
+</main>
+<!-- partial -->
+  <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
