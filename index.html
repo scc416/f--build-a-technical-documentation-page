@@ -50,24 +50,34 @@
         <div class="code">
           <div class="code-title">F#</div>
           <div class="code-content">
-            <code
-              ><!-- 
-          <span class="blue-code">open</span> System <span class="green-code">// Gets access to functionality in System namespace.</code>
-            <br><br>
-          <code>// Defines a function that takes a name and produces a greeting.</span></code>
-          <code><span class="blue-code"><br>let</span> getGreeting name = $<span class="red-code">"Hello, {name}! Isn't F# great?"</span>
-          <br><br>
-            <code><span class="light-blue-code">[&lt;EntryPoint&gt;]</span></code><br>
-          <code><span class="blue-code">let</span> main args =<br>
-            &nbsp; <span class="green-code">// Defines a list of names</span><br></code>
-<code>          &nbsp; <span class="blue-code">let</span> names = [ <span class="red-code">"Don"</span>; <span class="red-code">"Julia"</span>; <span class="red-code">"Xi"</span> ]<br>
-          <br>
-          &nbsp; <span class="green-code">// Prints a greeting for each name!</span><br>
-          &nbsp; names<br>
-          &nbsp; |> List.map getGreeting<br>
-          &nbsp; |> List.iter (<span class="blue-code">fun</span> greeting -> printfn $<span class="red-code">"{greeting}"</span>)<br>
-          <br>
-          &nbsp; 0<br>-->
+            <code>
+              <span class="blue-code">open</span> System
+              <span class="green-code"
+                >// Gets access to functionality in System namespace.<br />
+                <br />
+                // Defines a list of names</span
+              ><br />
+              <span class="blue-code">let</span> names = [
+              <span class="red-code">"Peter"</span>;
+              <span class="red-code">"Julia"</span>;
+              <span class="red-code">"Xi"</span> ]<br />
+              <br />
+              <span class="green-code"
+                >// Defines a function that takes a name and produces a
+                greeting.</span
+              ><br />
+              <span class="blue-code">let</span> getGreeting name = $<span
+                class="red-code"
+                >"Hello, {name}"</span
+              ><br />
+              <br />
+              <span class="green-code">// Prints a greeting for each name!</span
+              ><br />
+              names<br />
+              |> List.map getGreeting<br />
+              |> List.iter (<span class="blue-code">fun</span> greeting ->
+              printfn $<span class="red-code">"{greeting}! Enjoy your F#"</span
+              >)<br />
             </code>
           </div>
         </div>
