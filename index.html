@@ -1,48 +1,38 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>F# Documentation</title>
-  <link rel="stylesheet" href="./style.css">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>F# Documentation</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>
+        <h1>F# Documentation</h1>
+      </header>
+      <a class="nav-link" href="#what_is_f#">
+        <div class="nav-link-button">What is F#</div>
+      </a>
 
-</head>
-<body>
-<nav id="navbar">
-  <header>
-    <h1>F# Documentation</h1>
-  </header>
-  <a class="nav-link" href="#what_is_f#">
-    <div class="nav-link-button">
-      What is F#
-    </div>
-  </a>
+      <a class="nav-link" href="#get_started_with_f#">
+        <div class="nav-link-button">Get Started with F#</div>
+      </a>
 
-  <a class="nav-link" href="#get_started_with_f#">
-    <div class="nav-link-button">
-      Get Started with F#
-    </div>
-  </a>
+      <a class="nav-link" href="#introduction_to_functional_programming_in_f#">
+        <div class="nav-link-button">
+          Introduction to Functional Programming in F#
+        </div>
+      </a>
 
-  <a class="nav-link" href="#introduction_to_functional_programming_in_f#">
-    <div class="nav-link-button">
-      Introduction to Functional Programming in F#
-    </div>
-  </a>
-
-  <a class="nav-link" href="#async_programming_in_f#">
-    <div class="nav-link-button">
-      Async programming in F#
-    </div>
-  </a>
-  <a class="nav-link" href="#reference">
-    <div class="nav-link-button">
-      Reference
-    </div>
-  </a>
-
-</nav>
-<main id="main-doc">
-  <section class="main-section" id="what_is_f#">
+      <a class="nav-link" href="#async_programming_in_f#">
+        <div class="nav-link-button">Async programming in F#</div>
+      </a>
+      <a class="nav-link" href="#reference">
+        <div class="nav-link-button">Reference</div>
+      </a>
+    </nav>
+    <main id="main-doc">
+      <!-- <section class="main-section" id="what_is_f#">
     <header>
       <h2>What is F#</h2>
     </header>
@@ -156,46 +146,109 @@
       <li><strong>Referential Transparency</strong> - Referential Transparency is a property of expressions such that they can be replaced with their output without affecting a program's behavior.</li>
       <li><strong>Immutability</strong> - Immutability means that a value cannot be changed in-place. This is in contrast with variables, which can change in place.</li>
     </ul>
-  </section>
-  <section class="main-section" id="async_programming_in_f#">
-    <header>
-      <h2>Async programming in F#</h2>
-    </header>
-    <p>Asynchronous programming is a mechanism that is essential to modern applications for diverse reasons. There are two primary use cases that most developers will encounter:</p>
-<ul>
-    <li>Presenting a server process that can service a significant number of concurrent incoming requests, while minimizing the system resources occupied while request processing awaits inputs from systems or services external to that process</li>
-    <li>Maintaining a responsive UI or main thread while concurrently progressing background work</li>
-    </ul>
-<p>Although background work often does involve the utilization of multiple threads, it's important to consider the concepts of asynchrony and multi-threading separately. In fact, they are separate concerns, and one does not imply the other. This article describes the separate concepts in more detail.</p>
-  <h3>Asynchrony defined</h3>
+  </section>-->
+      <section class="main-section" id="async_programming_in_f#">
+        <header>
+          <h2>Async programming in F#</h2>
+        </header>
+        <p>
+          Asynchronous programming is a mechanism that is essential to modern
+          applications for diverse reasons. There are two primary use cases that
+          most developers will encounter:
+        </p>
+        <ul>
+          <li>
+            Presenting a server process that can service a significant number of
+            concurrent incoming requests, while minimizing the system resources
+            occupied while request processing awaits inputs from systems or
+            services external to that process
+          </li>
+          <li>
+            Maintaining a responsive UI or main thread while concurrently
+            progressing background work
+          </li>
+        </ul>
+        <p>
+          Although background work often does involve the utilization of
+          multiple threads, it's important to consider the concepts of
+          asynchrony and multi-threading separately. In fact, they are separate
+          concerns, and one does not imply the other. This article describes the
+          separate concepts in more detail.
+        </p>
+        <h3>Asynchrony defined</h3>
 
-<p>The previous point - that asynchrony is independent of the utilization of multiple threads - is worth explaining a bit further. There are three concepts that are sometimes related, but strictly independent of one another:</p>
-<ul>
-    <li>Concurrency; when multiple computations execute in overlapping time periods.</li>
-    <li>Parallelism; when multiple computations or several parts of a single computation run at exactly the same time.</li>
-    <li>Asynchrony; when one or more computations can execute separately from the main program flow.</li>
-  </ul>
-<p>All three are orthogonal concepts, but can be easily conflated, especially when they are used together. For example, you may need to execute multiple asynchronous computations in parallel. This relationship does not mean that parallelism or asynchrony imply one another.</p>
+        <p>
+          The previous point - that asynchrony is independent of the utilization
+          of multiple threads - is worth explaining a bit further. There are
+          three concepts that are sometimes related, but strictly independent of
+          one another:
+        </p>
+        <ul>
+          <li>
+            Concurrency; when multiple computations execute in overlapping time
+            periods.
+          </li>
+          <li>
+            Parallelism; when multiple computations or several parts of a single
+            computation run at exactly the same time.
+          </li>
+          <li>
+            Asynchrony; when one or more computations can execute separately
+            from the main program flow.
+          </li>
+        </ul>
+        <p>
+          All three are orthogonal concepts, but can be easily conflated,
+          especially when they are used together. For example, you may need to
+          execute multiple asynchronous computations in parallel. This
+          relationship does not mean that parallelism or asynchrony imply one
+          another.
+        </p>
 
-  <p>If you consider the etymology of the word "asynchronous", there are two pieces involved:</p>
-<ul>
-    <li>"a", meaning "not".</li>
-    <li>"synchronous", meaning "at the same time".</li>
-    </ul>
-<p>When you put these two terms together, you'll see that "asynchronous" means "not at the same time". That's it! There is no implication of concurrency or parallelism in this definition. This is also true in practice.</p>
+        <p>
+          If you consider the etymology of the word "asynchronous", there are
+          two pieces involved:
+        </p>
+        <ul>
+          <li>"a", meaning "not".</li>
+          <li>"synchronous", meaning "at the same time".</li>
+        </ul>
+        <p>
+          When you put these two terms together, you'll see that "asynchronous"
+          means "not at the same time". That's it! There is no implication of
+          concurrency or parallelism in this definition. This is also true in
+          practice.
+        </p>
 
-<p>In practical terms, asynchronous computations in F# are scheduled to execute independently of the main program flow. This independent execution doesn't imply concurrency or parallelism, nor does it imply that a computation always happens in the background. In fact, asynchronous computations can even execute synchronously, depending on the nature of the computation and the environment the computation is executing in.</p>
+        <p>
+          In practical terms, asynchronous computations in F# are scheduled to
+          execute independently of the main program flow. This independent
+          execution doesn't imply concurrency or parallelism, nor does it imply
+          that a computation always happens in the background. In fact,
+          asynchronous computations can even execute synchronously, depending on
+          the nature of the computation and the environment the computation is
+          executing in.
+        </p>
 
-<p>The main takeaway you should have is that asynchronous computations are independent of the main program flow. Although there are few guarantees about when or how an asynchronous computation executes, there are some approaches to orchestrating and scheduling them. The rest of this article explores core concepts for F# asynchrony and how to use the types, functions, and expressions built into F#.</p>
-  </section>
-  <section class="main-section" id="reference">
-    <header>
-      <h2>Reference</h2>
-    </header>
-    <p>
-      All the documentation in this page is taken from <a href="https://docs.microsoft.com/en-us/dotnet/fsharp/">Microsoft</a>.
-    </p>
-  </section>
-</main>
-</body>
+        <p>
+          The main takeaway you should have is that asynchronous computations
+          are independent of the main program flow. Although there are few
+          guarantees about when or how an asynchronous computation executes,
+          there are some approaches to orchestrating and scheduling them. The
+          rest of this article explores core concepts for F# asynchrony and how
+          to use the types, functions, and expressions built into F#.
+        </p>
+      </section>
+      <section class="main-section" id="reference">
+        <header>
+          <h2>Reference</h2>
+        </header>
+        <p>
+          All the documentation in this page is taken from
+          <a href="https://docs.microsoft.com/en-us/dotnet/fsharp/">Microsoft</a
+          >.
+        </p>
+      </section>
+    </main>
+  </body>
 </html>
