@@ -16,13 +16,13 @@ https://scc416.github.io/fsharp-documentation/
 
 ## Final Product
 
-<!-- | ![content](./docs/desktop-content.png) |
+| ![content](./docs/desktop.png) |
 | :------------------------------------: |
 |       _The web page on desktop_        |
 
-| ![mobile](./docs/mobile-initial.png) |
+| ![mobile](./docs/mobile.png) |
 | :----------------------------------: |
-|       _The web page on mobile_       | -->
+|       _The web page on mobile_       |
 
 ## Getting Started
 
