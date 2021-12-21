@@ -1,14 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Poppins:wght@300;700&display=swap');
-:root {
-  font-family: "Poppins";
-  color: #323232;
-}
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Poppins:wght@300;700&display=swap");
 
 body {
   padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
+  font-family: "Poppins";
+  color: #323232;
+}
+
+main {
+  padding: 0 2em;
+}
+
+nav {
+  padding-left: 15px;
 }
 
 nav a {
@@ -60,27 +66,19 @@ h2 {
 .grid-container {
   display: grid;
   grid-template-columns: 2fr 5fr 5fr 5fr;
+  align-items: center;
 }
 
 .grid {
-  padding: 5% 5% 5% 5%;
-}
-
-.grid-border {
   border-top: 0.2em solid #e0e0e0;
-}
+  height: 100%;
+  padding: 0 0.4em;
+} 
 
-.strong {
+.grid.strong {
   font-weight: 800;
-}
-
-nav {
-  padding-left: 15px;
-}
-
-main {
-  padding: 0 2em;
-}
+  border: none;
+} 
 
 @media (min-width: 800px) {
   header {
