@@ -8,6 +8,8 @@
 body {
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 nav a {
@@ -33,13 +35,13 @@ h2 {
   padding-bottom: 1em;
 }
 
-.code-title {
+.code p {
   background-color: #e0e0e0;
   padding: 0.8em;
 }
 
-.code-content {
-  padding: 0.7em 1.5em;
+.code div {
+  padding: 0em 1.5em 0.7em 1.5em;
 }
 
 .blue-code {
@@ -69,11 +71,6 @@ h2 {
 
 .strong {
   font-weight: 800;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
 }
 
 nav {
