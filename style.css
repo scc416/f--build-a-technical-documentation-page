@@ -32,7 +32,7 @@ nav a div:hover {
 
 h2 {
   font-family: "Libre Baskerville";
-  padding-top: 1em;
+  padding-top: 0.3em;
 }
 
 .code {
@@ -65,7 +65,7 @@ h2 {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 2fr 5fr 5fr 5fr;
+  grid-template-columns: auto auto auto auto;
   align-items: center;
 }
 
