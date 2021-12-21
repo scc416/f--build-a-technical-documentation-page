@@ -5,10 +5,10 @@
   color: #323232;
 }
 
-/* * {
+body {
   padding: 0;
   margin: 0;
-} */
+}
 
 nav a {
   color: #323232;
@@ -17,11 +17,10 @@ nav a {
 
 nav a div {
   padding: 0.5em 1em;
-  /* max-width: 100%; */
 }
 
 nav a div:hover {
-  background-color: #EFEFEF;
+  background-color: #efefef;
 }
 
 h2 {
@@ -30,12 +29,12 @@ h2 {
 }
 
 .code {
-  background-color: #EFEFEF;
+  background-color: #efefef;
   padding-bottom: 1em;
 }
 
 .code-title {
-  background-color: #E0E0E0;
+  background-color: #e0e0e0;
   padding: 0.8em;
 }
 
@@ -65,7 +64,7 @@ h2 {
 }
 
 .grid-border {
-  border-top: 0.2em solid #E0E0E0;
+  border-top: 0.2em solid #e0e0e0;
 }
 
 .strong {
@@ -77,27 +76,27 @@ body {
   flex-direction: column;
 }
 
+nav {
+  padding-left: 15px;
+}
+
+main {
+  padding: 0 2em;
+}
+
 @media (min-width: 800px) {
   header {
-    min-width: 255px;
-    /* overflow-y: auto;
-    overflow-x: hidden; */
-    height: 100vh;
-    
-    border-right: 0.3em solid #EFEFEF;
+    min-width: 270px;
   }
 
   nav {
     position: fixed;
     width: 255px;
-    z-index: 2;
+    border-right: 0.3em solid #efefef;
+    height: 100vh;
   }
 
   body {
     flex-direction: row;
-  }
-
-  main {
-    padding: 0 2em;
   }
 }
